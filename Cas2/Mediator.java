@@ -54,7 +54,7 @@ public class Mediator {
         }else{
             receipe.setTitle(title);
         }
-
+        
         checkPrintable();
         checkAddStepClickable();
     }

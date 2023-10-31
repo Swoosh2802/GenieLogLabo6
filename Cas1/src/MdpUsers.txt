@@ -1,0 +1,4 @@
+anissa:mdp1
+manon:mdp2
+florent:mdp3
+salah:mdp4

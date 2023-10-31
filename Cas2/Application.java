@@ -106,9 +106,7 @@ public class Application{
         addStepButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String selectedValue = itemList.getSelectedValue();
                 String inputText = textArea.getText();
-                JOptionPane.showMessageDialog(frame, "Bouton 1 cliqué!\nÉlément sélectionné : " + selectedValue + "\nTexte du champ : " + inputText);
                 steps.addElement(inputText);
                 mediator.stepAdded(inputText);
             }
@@ -138,6 +136,7 @@ public class Application{
         JPanel receipeTimeContainer = new JPanel();
         receipeTimeContainer.add(receipeTime);
         headerContent.add(receipeTitleContainer);
+        headerContent.add(receipeTimeContainer);
         JPanel headerPanel = new JPanel();
         headerPanel.setLayout(new BoxLayout(headerPanel, BoxLayout.X_AXIS));
         headerPanel.add(headerTitles);
@@ -170,7 +169,7 @@ public class Application{
         titleHeaderPanel.add(headerPanel);
 
         JPanel stepsPannel = new JPanel();
-        stepsPannel.setLayout(new FlowLayout(FlowLayout.CENTER,0,0));
+        stepsPannel.setLayout(new BoxLayout(stepsPannel, BoxLayout.Y_AXIS));
         stepsPannel.add(stepsLabel);
         stepsPannel.add(stepList);
 
